@@ -51,3 +51,5 @@ set(SOURCE_FILES
 set_property(SOURCE iio.c PROPERTY COMPILE_FLAGS "-Wno-unused-variable -Wno-unused-parameter -Wno-pointer-sign -Wno-parentheses -Wno-deprecated-declarations -Wno-unused-function")
 
 add_executable(bm3d ${SOURCE_FILES})
+
+install(TARGETS bm3d DESTINATION bin)

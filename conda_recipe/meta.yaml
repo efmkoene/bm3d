@@ -1,0 +1,42 @@
+package:
+  name: bm3d
+  version: 1.0
+
+source:
+  git_url: https://github.com/efmkoene/bm3d
+
+requirements:
+  run_exports:
+    strong:
+      - libpng
+      - libtiff
+      - jpeg
+      - fftw
+      - eigen
+  host:
+    - {{ compiler('cxx') }}
+    - cmake
+    - python ==3.9
+    - libpng
+    - libtiff
+    - jpeg
+    - fftw
+    - eigen
+  run:
+    - libtiff
+    - jpeg
+    - fftw
+
+about:
+  home: https://github.com/efmkoene/bm3d
+  license: GPL-3
+  license_family: GPL3
+  summary: "An implementation of BM3D with TIFF capability for floating points"
+  description: |
+    This package contains an implementation of BM3D that allows one
+    to filter images of .png, .jpeg, or .tiff file formats. The 
+    latter is useful for dealing with floating point data.
+    Based on the implementation found in https://github.com/gfacciol/bm3d
+    and that in turn is based on https://www.ipol.im/pub/art/2012/l-bm3d/
+    Lebrun (2012). An Analysis and Implementation of the BM3D Image Denoising 
+    Method.

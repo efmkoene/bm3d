@@ -16,7 +16,7 @@ requirements:
   host:
     - {{ compiler('cxx') }}
     - cmake
-    - python ==3.9
+    - python
     - libpng
     - libtiff
     - jpeg
@@ -24,6 +24,7 @@ requirements:
     - eigen
   run:
     - libtiff
+    - libpng
     - jpeg
     - fftw
 

@@ -33,6 +33,7 @@ if(OPENMP_FOUND)
 endif()
 
 # Link LibTIFF, LibJPEG, LibPNG, OpenMP
+set(CMAKE_FIND_FRAMEWORK LAST)
 find_package (TIFF REQUIRED)
 find_package (JPEG REQUIRED)
 find_package (PNG REQUIRED)
